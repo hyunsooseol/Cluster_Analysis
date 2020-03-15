@@ -1,5 +1,4 @@
 
-
 library(tidyverse)
 # Load  and prepare the data
 data("USArrests")
@@ -18,13 +17,12 @@ install.packages("factoextra")
 library("factoextra")
 fviz_nbclust(my_data, kmeans, method = "gap_stat")
 
-
-
 km.res <- kmeans(my_data, 3, nstart = 25)
 
 km.res[]
 
 # Visualize
+
 library("factoextra")
 
 fviz_cluster(km.res, data = my_data,
